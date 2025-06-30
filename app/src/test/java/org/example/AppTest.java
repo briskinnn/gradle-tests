@@ -7,8 +7,37 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void emptyExampleTest(){
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest);
+
+    @Test
+    public void testAdd() {
+        assertEquals(7, App.add(3, 4));
+    }
+
+    @Test
+    public void testIsPrimeTrue() {
+        assertTrue(App.isPrime(5));
+    }
+
+    @Test
+    public void testIsPrimeFalse() {
+        assertFalse(App.isPrime(4));
+    }
+
+    @Test
+    public void testReverse() {
+        assertEquals("cba", App.reverse("abc"));
+    }
+
+    @Test
+    public void testFactorial() {
+        assertEquals(120, App.factorial(5));
+    }
+
+    @Test
+    public void testIsPalindrome() {
+        assertTrue(App.isPalindrome("A man, a plan, a canal: Panama"));
     }
 }
+
+
+
